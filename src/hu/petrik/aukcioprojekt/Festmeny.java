@@ -87,8 +87,8 @@ public class Festmeny {
         }
         else if (this.licitekSzama>0)
         {
-            int szazalek = legmagasabbLicit/mertek;
-            this.legmagasabbLicit = legmagasabbLicit+szazalek;
+            int szazalek =(int)(this.legmagasabbLicit/100*mertek);
+            this.legmagasabbLicit = (this.legmagasabbLicit+szazalek);
             this.licitekSzama ++;
             this.legutolsoLicitIdeje = LocalDateTime.now();
         }
@@ -99,8 +99,6 @@ public class Festmeny {
         if (this.elkelt ==true)
         {
          String alma =String.format("%s: %s (%s) \nElkelt\n%d $ - %s (összesen: %d db)",this.festo, this.cim, this.stilus, this.legmagasabbLicit, this.legutolsoLicitIdeje, this.licitekSzama);
-
-
 
             return alma;
 

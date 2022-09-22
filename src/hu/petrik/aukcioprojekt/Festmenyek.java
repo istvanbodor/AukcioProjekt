@@ -8,11 +8,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Festmenyek {
-    private List <Festmeny> lista;
+    private List <Festmeny> lista = new ArrayList<>();
 
+    public Festmenyek() {
+    }
 
     public Festmenyek(String fajlNev) throws IOException {
-        this.lista = new ArrayList<>();
+
         FileReader fr = new FileReader(fajlNev);
         BufferedReader br = new BufferedReader(fr);
         String sor = br.readLine();
@@ -27,7 +29,10 @@ public class Festmenyek {
         fr.close();
     }
 
+    public Festmenyek(Festmeny[] emberTomb) {
 
+        this.lista.addAll(Arrays.asList(emberTomb));
+    }
 
 
 

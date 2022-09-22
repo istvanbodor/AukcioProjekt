@@ -10,14 +10,22 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Scanner sc = new Scanner(System.in);
+       /*Scanner sc = new Scanner(System.in);
+        Festmenyek festmenyek = new Festmenyek();
 
-        List <Festmeny> lista = new ArrayList<>();
-        lista.add(new Festmeny("Festett kep","Bodor István","Barokk"));
-        lista.add(new Festmeny("Festett vaszon","Bodor István","Romantikus"));
         System.out.println("Adja meg hány festményt szeretne hozzáadni: ");
         int n = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine();*/
+        Festmeny festmeny = new Festmeny("Macskajajj", "Bodor István", "Romantikus");
+        festmeny.licit();
+        System.out.println(festmeny);
+        festmeny.licit();
+        System.out.println(festmeny);
+        festmeny.licit();
+
+        System.out.println(festmeny);
+        festmeny.licit(50);
+        System.out.println(festmeny);
 
 
 
