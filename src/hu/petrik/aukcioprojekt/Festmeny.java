@@ -49,13 +49,52 @@ public class Festmeny {
         return this.elkelt;
 
     }
-    public void setElkelt()
+    public void setElkelt(boolean elkelt)
     {
-        this.elkelt = true;
+        this.elkelt = elkelt;
 
     }
+    public void licit()
+    {
+        if (this.elkelt = true)
+        {
+            System.out.println("A festmény már elkelt!");
+        }
+        else if (this.licitekSzama ==0)
+        {
+            this.legmagasabbLicit +=100;
+            this.licitekSzama ++;
+            this.legutolsoLicitIdeje = LocalDateTime.now();
+
+        }
+        else {
+            licit(10);
+        }
+    }
+    public void licit(int mertek)
+    {
+        if (mertek<10||mertek>100)
+        {
+            System.out.println("Hibás paraméter!");
+
+        }
+        else if(this.licitekSzama ==0)
+        {
+            this.legmagasabbLicit +=100;
+            this.licitekSzama ++;
+            this.legutolsoLicitIdeje = LocalDateTime.now();
+
+        }
+        else if (this.licitekSzama>0)
+        {
+            double szazalek = (1 + mertek/100);
+            this.legmagasabbLicit = (int)(this.legmagasabbLicit*szazalek);
+            this.licitekSzama ++;
+            this.legutolsoLicitIdeje = LocalDateTime.now();
+        }
 
 
+    }
 
 
 }
