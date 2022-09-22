@@ -92,9 +92,26 @@ public class Festmeny {
             this.licitekSzama ++;
             this.legutolsoLicitIdeje = LocalDateTime.now();
         }
+    }
+
+    @Override
+    public String toString() {
+        if (this.elkelt ==true)
+        {
+         String alma =String.format("%s: %s (%s) \nElkelt\n%d $ - %s (összesen: %d db)",this.festo, this.cim, this.stilus, this.legmagasabbLicit, this.legutolsoLicitIdeje, this.licitekSzama);
+
+
+
+            return alma;
+
+        }
+        else{
+
+            String alma =String.format("%s: %s (%s) \n%d $ - %s (összesen: %d db)",this.festo, this.cim, this.stilus, this.legmagasabbLicit, this.legutolsoLicitIdeje, this.licitekSzama);
+            return alma;
+        }
+
 
 
     }
-
-
 }
