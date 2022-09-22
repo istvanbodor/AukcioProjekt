@@ -56,7 +56,7 @@ public class Festmeny {
     }
     public void licit()
     {
-        if (this.elkelt = true)
+        if (this.elkelt == true)
         {
             System.out.println("A festmény már elkelt!");
         }
@@ -87,8 +87,8 @@ public class Festmeny {
         }
         else if (this.licitekSzama>0)
         {
-            double szazalek = (1 + mertek/100);
-            this.legmagasabbLicit = (int)(this.legmagasabbLicit*szazalek);
+            int szazalek = legmagasabbLicit/mertek;
+            this.legmagasabbLicit = legmagasabbLicit+szazalek;
             this.licitekSzama ++;
             this.legutolsoLicitIdeje = LocalDateTime.now();
         }
